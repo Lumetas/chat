@@ -1,0 +1,130 @@
+@media screen and (min-width: 120vh) {
+    #chats {
+        position: absolute;
+        left: 0;
+        top: 0dvh;
+        width: 30vw;
+        height: 95dvh;
+    }
+
+    #chatwindow {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 68vw;
+        height: 100dvh;
+        z-index: 3;
+
+    }
+
+    #text_to_send {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        width: 64vw;
+        height: 3vw;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: #3b3b3b;
+        border-radius: 10px;
+        outline: none;
+        font-size: 1.5vw;
+    }
+
+    #send_message {
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        width: 3vw;
+        height: 3vw;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: #3b3b3b;
+        border-radius: 10px;
+        text-align: center;
+        color: transparent;
+        cursor: pointer;
+        font-size: 1.5vw;
+    }
+
+    #send_message::placeholder {
+        color: white;
+    }
+
+    #history {
+        top: 3vw;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: calc(100% - 6vw);
+        overflow-y: auto;
+    }
+
+    #create_chat {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30vw;
+
+    }
+
+    .move_btn {
+        width: 100%;
+        height: 3vw;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: #3b3b3b;
+        outline: none;
+        font-size: 1.5vw;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+        color: transparent;
+    }
+
+    .shot_input {
+        width: 100%;
+        height: 3vw;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: #3b3b3b;
+        outline: none;
+        font-size: 1.5vw;
+    }
+
+    #settings_window {
+        width: 68vw;
+        right: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .window {
+        position: absolute;
+        right: 0;
+        top: -100dvh;
+        width: 100vw;
+        height: 100dvh;
+        z-index: 2;
+        background-color: #121212;
+        overflow-y: auto;
+    }
+
+    .exit_settings_btn {
+        display: none;
+        font-size: 0dvh;
+    }
+
+    .settings_area {
+        height: 20dvh;
+        resize: none;
+    }
+
+    #create_chat {
+        display: none;
+    }
+}

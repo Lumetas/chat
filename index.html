@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>client</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/landscape.css" rel="stylesheet">
+    <link href="css/portrait.css" rel="stylesheet">
+    <link href="css/quad.css" rel="stylesheet">
+</head>
+
+<body>
+    <input type="text" id="create_chat" class="move_btn"
+        onclick="this.blur(); open_window('settings_window', ['exit_settings', {value: 'exit'}]);"
+        placeholder="settings">
+    <div id="chats">
+
+    </div>
+
+    <div class="window" id="chatwindow">
+        <div id="chat_header">
+            <input class="move_btn" id="exit_chat" type="text" onclick="this.blur(); close_window('chatwindow');"
+                placeholder="⥣   exit   ⥣">
+        </div>
+        <div id="history"></div>
+        <input type="text" id="text_to_send" placeholder="message:">
+        <input type="text" class="move_btn" id="send_message" onclick="this.blur(); send()" placeholder="➣">
+    </div>
+
+    <div id="settings_window" class="window">
+        <input class="move_btn exit_settings_btn" id="exit_settings" type="text"
+            onclick="this.blur(); close_window('settings_window');" placeholder=""><br class="exit_settings_btn"><br
+            class="exit_settings_btn"><br class="exit_settings_btn">
+        <input type="text" id="chat_info" class="shot_input" placeholder="chat info:"><br><br>
+        <input type="text" class="move_btn" onclick="this.blur(); add_chat()" placeholder="add chat"><br><br><br>
+        <textarea id="chat_list_area" class="settings_area shot_input" placeholder="Чаты"></textarea><br><br><br>
+        <textarea id="plugin_list_area" class="settings_area shot_input" placeholder="Плагины"></textarea>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
