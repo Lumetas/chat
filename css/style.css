@@ -13,3 +13,7 @@
 .chat_element_radio {
     display: none;
 }
+
+video, img, embed{
+    max-width: 95%;
+}

@@ -78,6 +78,7 @@ function open_window(id, th = undefined) {
         document.getElementById(th[0]).placeholder = `⥣   ${th[1].value}   ⥣`;
         storage_edit.set_array("current_window", [th[1].value], true);
         update();
+        
     }
 
 }
@@ -124,10 +125,23 @@ function update(){
     let chat = storage_edit.get_array("current_window", true)[0].split(':');
     method = chat[0];
     contact = chat[1];
-    // methods[method].load(contact);
+    
     
 }
 
 document.getElementById('text_to_send').onkeyup = (e) => {
     if (e.key === "Enter"){send()}
+}
+
+
+
+
+elementToObserve = window.document.getElementById('history');
+observer = new MutationObserver(function(mutationsList, observer) {
+    setTimeout(() => {document.getElementById('history').scrollTo(0,99999999);}, 100);
+});
+observer.observe(elementToObserve, {characterData: false, childList: true, attributes: false});
+
+document.getElementById('history').onload = () => {
+    document.getElementById('history').scrollTo(0,99999999);
 }
